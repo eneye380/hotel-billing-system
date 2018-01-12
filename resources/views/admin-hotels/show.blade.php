@@ -84,6 +84,7 @@
 </div>
 @endsection @section('scripts')
 <script>
+	swal('happy');
 	function unbook(obj){
 		swal(obj.id);
 	}

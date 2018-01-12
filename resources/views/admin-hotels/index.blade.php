@@ -30,7 +30,7 @@
 	<div class="col-lg-6">
 		<div class="card">
 			<div class="card-header bg-white">
-				<h3 class="card-title">Add a Parking Lot</h3>
+				<h3 class="card-title">Add a Hotel</h3>
 			</div>
 			<div class="card-body">
 				<form action="/admin/hotels" method="POST">
@@ -67,7 +67,7 @@
 							</div>
 						</div>
 					</div>
-					<input type="text" value="{{Sentinel::check()->id}}" name="user_id">
+					<input type="hidden" value="{{Sentinel::check()->id}}" name="user_id">
 					<input type="hidden" value="" name="property_id">
 					<div class="card-footer">
 						<!--a- class="btn btn-primary btn-block" href="login.html">Register</a-->
