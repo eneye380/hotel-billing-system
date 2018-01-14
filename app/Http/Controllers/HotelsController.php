@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hotel;
+use DB;
 
 class HotelsController extends Controller
 {
@@ -57,12 +58,12 @@ class HotelsController extends Controller
         $hotel = Hotel::findOrFail($id);
        $spaces = range(1, $hotel->capacity, 1);
 
-        /*$booked = DB::table('spaces')
-                ->where('hotels_lot_id',$id)
-                ->orderBy('space_number', 'asc')
-                ->get();*/
+        $booked = DB::table('bookings')
+                ->where('hotel_id',$id)
+                ->orderBy('room_number', 'asc')
+                ->get();
 
-        $booked = range(1, 13);
+        //$booked = range(1, 13);
         //return view('admin-hotels.show');
         return view('admin-hotels.show')->with(compact('hotel'))->with(compact('spaces'))->with(compact('booked'));
     }

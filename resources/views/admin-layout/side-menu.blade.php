@@ -12,6 +12,12 @@
 			<span class="nav-link-text">Manage Hotels</span>
 		</a>
 	</li>
+	<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Manage Accounts">
+			<a class="nav-link" href="/admin/bills">
+				<i class="fa fa-fw fa-money"></i>
+				<span class="nav-link-text">Manage Accounts</span>
+			</a>
+		</li>
 	<!--li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add Parking Lot">
 			<a class="nav-link" href="/admin/parkinglots/create">
 				<i class="fa fa-fw fa-plus"></i>

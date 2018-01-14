@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Cartalyst\Sentinel\Users\EloquentUser;
+use App\Booking;
+use App\Bill;
 
 class User extends EloquentUser
 {
@@ -26,4 +28,12 @@ class User extends EloquentUser
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function bookings(){
+        return $this->hasMany(Booking::class);
+    }
+
+    public function bills(){
+        return $this->hasMany(Bill::class);
+    }
 }

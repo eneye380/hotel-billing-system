@@ -38,19 +38,19 @@ class BookingsController extends Controller
     public function store(Request $request)
     {
         $booking = Booking::where('user_id', $request->user_id)
-                    ->where('parking_lot_id',$request->parking_lot_id)->first();
+                    ->where('hotel_id',$request->hotel_id)->first();
         if($booking){
             //return response()->json(['redirect'=>"You have already made a booking."]);
         }
-        $booking = Booking::where('plate_number', $request->plate_number)
-                    ->where('parking_lot_id',$request->parking_lot_id)->first();
+        /*$booking = Booking::where('plate_number', $request->plate_number)
+                    ->where('hotel_id',$request->hotel_id)->first();
         if($booking){
             return response()->json(['redirect'=>"Booking exist for vehicle with Plate Number: $request->plate_number"]);
-        }
-        $booking = Booking::where('space_number', $request->space_number)
-                    ->where('parking_lot_id',$request->parking_lot_id)->first();
+        }*/
+        $booking = Booking::where('room_number', $request->room_number)
+                    ->where('hotel_id',$request->hotel_id)->first();
         if($booking){
-            return response()->json(['redirect'=>"Booking $request->space_number already taken."]);
+            return response()->json(['redirect'=>"Booking $request->room_number already taken."]);
         }
 
         $book = Booking::create($request->all());
@@ -101,6 +101,6 @@ class BookingsController extends Controller
     {
         $space = Booking::find($id);
         Booking::destroy($id);
-        return redirect()->back()->with(['success'=>"Booking $space->space_number unbooked successfully"]);
+        return redirect()->back()->with(['success'=>"Booking $space->room_number unbooked successfully"]);
     }
 }

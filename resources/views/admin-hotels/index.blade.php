@@ -8,7 +8,7 @@
 </ol>
 <!-- Icon Cards-->
 <div class="row">
-	<div class="col-xl-3 col-sm-6 mb-3">
+	<!--div class="col-xl-3 col-sm-6 mb-3">
 		<a href="/admin/hotels/create" class="btn btn-lg btn-warning btn-block">Add Parking Lot</a>
 	</div>
 	<div class="col-xl-3 col-sm-6 mb-3">
@@ -17,9 +17,9 @@
 	<div class="col-xl-3 col-sm-6 mb-3">
 		<a href="/admin/bookings" class="btn btn-lg btn-danger btn-block">Bookings</a>
 	</div>
-	<div class="col-xl-3 col-sm-6 mb-3">
-		<!--a class="btn btn-lg btn-primary btn-block">Value</a-->
-	</div>
+	<div-- class="col-xl-3 col-sm-6 mb-3">
+		<a class="btn btn-lg btn-primary btn-block">Value</a>
+	</div-->
 </div>
 @if(session('success'))
 <div class="alert alert-success">

@@ -102,8 +102,10 @@
         <li class="nav-item">
           <!--a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a-->
+            
             <form action="/logout" method="POST" id="logout-form">
               {{csrf_field()}}
+              <span class="mb-3 text-white">{{Sentinel::getUser()->name}}</span>
               <a class="btn btn-primary" href="#" onclick="document.getElementById('logout-form').submit()">Logout</a>
             </form>
         </li>

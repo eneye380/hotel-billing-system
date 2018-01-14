@@ -27,7 +27,7 @@ class LoginMeController extends Controller
                 if ($slug == 'manager') {
                     
                 }*/
-                return redirect('admin/hotels');
+                return redirect('/customer');
             } else {
                 return redirect()->back()->with(["error"=>"Wrong Credentials"]);
             }

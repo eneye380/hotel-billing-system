@@ -3,12 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-//use App\User;
 
-class Booking extends Model
+class Bill extends Model
 {
     protected $fillable = [
-        'user_id', 'hotel_id', 'room_number', 'duration', 'arrival_date',
+        'user_id', 'hotel_id', 'room_number', 'duration', 'rate', 'bill',
     ];
 
     public function user(){
@@ -18,5 +17,4 @@ class Booking extends Model
     public function hotel(){
         return $this->belongsTo(Hotel::class);
     }
-
 }
